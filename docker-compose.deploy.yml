@@ -1,0 +1,2 @@
+viewer:
+  image: $DOCKER_REGISTRY/viewer:$SERVICE_VERSION
