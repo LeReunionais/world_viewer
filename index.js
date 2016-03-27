@@ -18,4 +18,6 @@ io.on('connection', (socket) => {
 
 app.use(express.static('app'));
 
-server.listen(9000);
+server.listen(9000, () => {
+	console.log("Listening on port 9000");
+});

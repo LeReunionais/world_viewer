@@ -1,0 +1,11 @@
+viewer:
+  build: .
+  ports:
+    - "9000:9000"
+  restart: always
+test:
+  build: .
+  command: echo "No tests defined"
+coverage:
+  build: .
+  command: echo "No coverage defined"
