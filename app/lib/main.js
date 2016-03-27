@@ -2,7 +2,7 @@ import io from 'socket.io-client';
 import THREE from 'three';
 import './component.css!';
 
-var socket = io.connect('http://localhost:9000');
+var socket = io.connect();
 
 
 // create a scene, that will hold all our elements such as objects, cameras and lights.
