@@ -4,7 +4,7 @@
   "description": "Visual for a world",
   "main": "index.js",
   "scripts": {
-		"start": "node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +15,7 @@
   "dependencies": {
     "bunyan": "^1.8.0",
     "express": "^4.13.4",
+    "service_js": "^1.0.1",
     "socket.io": "^1.4.5",
     "zmq": "^2.14.0"
   },
