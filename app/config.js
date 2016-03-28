@@ -18,6 +18,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.20",
+    "dat-gui": "npm:dat-gui@0.5.0",
     "socket.io": "npm:socket.io@1.4.5",
     "socket.io-client": "npm:socket.io-client@1.4.5",
     "three": "github:mrdoob/three.js@master",
