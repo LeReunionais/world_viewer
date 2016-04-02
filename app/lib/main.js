@@ -8,8 +8,7 @@ import renderer, { renderer_init } from './renderer.js';
 import particle from './objects/particle.js';
 
 import axis from './helpers/axis.js';
-
-import dat from 'dat-gui';
+import './helpers/controls.js';
 
 var socket = io.connect();
 
@@ -22,17 +21,14 @@ createParticles(scene);
 scene.add(axis.create());
 render(scene, camera, renderer);
 
-const gui = new dat.GUI();
-
 function createParticles(scene) {
 	const sphere = particle.create();
+	const updateSphere = particle.update.bind(null, sphere);
 	scene.add(sphere);
 
 	socket.on('state', (data) => {
 		var positions = JSON.parse(data).particles[0].position;
-		sphere.position.setX(positions.y * 10);
-		sphere.position.setY(positions.x * 50);
-		sphere.position.setZ(positions.z * 10);
+		updateSphere(positions.y * 10, positions.x * 50, positions.z * 10);
 	});
 }
 

@@ -6,6 +6,13 @@ function create() {
 	return new THREE.Mesh(geom, material);
 }
 
+function update(particle, x, y, z) {
+	particle.position.setX(x);
+	particle.position.setY(y);
+	particle.position.setZ(z);
+}
+
 export default {
-	create
+	create,
+	update
 }
