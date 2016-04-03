@@ -9,4 +9,9 @@ export function camera_init() {
 	camera.position.z = 150;
 }
 
+export function camera_resize(width, height) {
+	camera.aspect = width / height;
+	camera.updateProjectionMatrix();
+}
+
 export default camera;

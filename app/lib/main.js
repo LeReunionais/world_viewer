@@ -2,8 +2,8 @@ import io from 'socket.io-client';
 import './component.css!';
 
 import scene from './scene.js';
-import camera, { camera_init } from './camera.js';
-import renderer, { renderer_init } from './renderer.js';
+import camera, { camera_init, camera_resize } from './camera.js';
+import renderer, { renderer_init, renderer_resize } from './renderer.js';
 
 import particle from './objects/particle.js';
 
@@ -17,6 +17,15 @@ renderer_init();
 document.body.appendChild(renderer.domElement);
 
 camera_init();
+
+function onResize() {
+		const width = window.innerWidth;
+		const height = window.innerHeight;
+		camera_resize(width, height);	
+		renderer_resize(width, height);	
+}
+window.addEventListener('resize', onResize, false);
+
 createParticles(scene);
 scene.add(axis.create());
 render(scene, camera, renderer);

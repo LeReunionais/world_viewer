@@ -8,4 +8,8 @@ export function renderer_init() {
 	webGLRenderer.setSize(window.innerWidth, window.innerHeight);
 }
 
+export function renderer_resize(width, height) {
+	webGLRenderer.setSize(width, height);
+}
+
 export default webGLRenderer;
