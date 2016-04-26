@@ -9,9 +9,10 @@ RUN apt-get install libzmq3-dev -y
 RUN ldconfig
 RUN apt-get install pkg-config -y
 
-COPY . /world_viewer
 WORKDIR /world_viewer
-
+ADD package.json /world_viewer/package.json
 RUN npm install
+
+ADD . /world_viewer/
 
 CMD npm start
